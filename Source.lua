@@ -6,7 +6,7 @@ local humanoid = chr.Humanoid
 --Gui Lib
 local OrionLib = loadstring(game:HttpGet(('https://raw.githubusercontent.com/shlexware/Orion/main/source')))()
 --Creates the Whole Gui
-local Window = OrionLib:MakeWindow({Name = "Raise A Peter Script", HidePremium = false, SaveConfig = true, ConfigFolder = "Oriontest"})
+local Window = OrionLib:MakeWindow({Name = "Raise A Peter Script"})
 --All the tabs and scripts placed here
 local MainTab = Window:MakeTab({
 	Name = "Main"
@@ -23,7 +23,7 @@ MainTab:AddToggle({
 	Default = false,
 	Callback = function(Value)
 	    farm = Value
-		while farm do wait(0)
+		while farm do wait(0.1)
         for a,b in pairs(game:GetService("Workspace").Interactables.MoneyBills:GetChildren())do if b.Name=="Money"then firetouchinterest(b,humroot,0)firetouchinterest(b,humroot,1)end end;for a,c in pairs(game:GetService("Workspace").Interactables.Peter:GetChildren())do if c.Name=="Peter"then humroot.CFrame=c.Clickable.CFrame*CFrame.new(0,-1.1,0)fireclickdetector(c.Clickable.DropMoney,0)end end;for a,d in pairs(game:GetService("Workspace").Interactables.BagFolder:GetChildren())do if d.Name=="Bag"then firetouchinterest(d,humroot,0)firetouchinterest(d,humroot,1)end end
 end
 end
