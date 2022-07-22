@@ -33,6 +33,17 @@ end
 end
 })
 MainTab:AddToggle({
+    Name = "Toggle OpenBoxes",
+	Default = false,
+	Callback = function(Value)
+	    openbox = Value
+	   while openbox == true do wait(0)
+	    game:GetService("Workspace").Interactables.Objects.FrontDoor.Open.Value = true
+        for a,b in pairs(game:GetService("Workspace"):GetDescendants())do if b.Name=="ProximityPrompt"then if b.Parent.Parent.Name=="Bottom"then humroot.CFrame=b.Parent.Parent.CFrame;fireproximityprompt(b,0)end end end
+end
+end
+})
+MainTab:AddToggle({
     Name = "Toggle Contacts",
 	Default = false,
 	Callback = function(Value)
@@ -57,15 +68,16 @@ end
 
 })
 MainTab:AddToggle({
-    Name = "Toggle OpenBoxes",
+    Name = "Toggle FeatherShop",
 	Default = false,
 	Callback = function(Value)
-	    openbox = Value
-	   while openbox == true do wait(0)
-	    game:GetService("Workspace").Interactables.Objects.FrontDoor.Open.Value = true
-        for a,b in pairs(game:GetService("Workspace"):GetDescendants())do if b.Name=="ProximityPrompt"then if b.Parent.Parent.Name=="Bottom"then humroot.CFrame=b.Parent.Parent.CFrame;fireproximityprompt(b,0)end end end
+	   if Value == true then
+	   game:GetService("Players").LocalPlayer.PlayerGui.ShopGUI.ChickenCoop.Visible = true
+	   else
+	   game:GetService("Players").LocalPlayer.PlayerGui.ShopGUI.ChickenCoop.Visible = false
 end
 end
+
 })
 --Teleports area
 TeleportTab:AddButton({
