@@ -11,10 +11,14 @@ local Window = OrionLib:MakeWindow({Name = "Raise A Peter Script"})
 local MainTab = Window:MakeTab({
 	Name = "Main"
 })
-MainTab:AddLabel("Dont execute the script again if any buttons are toggled!")
+local TeleportTab = Window:MakeTab({
+    Name = "Teleports"
+})
 local CreditsTab = Window:MakeTab({
     Name = "Credits"
 })
+--Main area
+MainTab:AddLabel("Dont execute the script again if any buttons are toggled!")
 local Section = MainTab:AddSection({
 	Name = "Auto Farm"
 })
@@ -63,6 +67,20 @@ MainTab:AddToggle({
 end
 end
 })
+--Teleports area
+TeleportTab:AddButton({
+    Name = "Teleport To Gas Station",
+    Callback = function()
+        humroot.CFrame = CFrame.new(134.715775, 3.24999881, 121.296318)
+    end
+})
+TeleportTab:AddButton({
+    Name = "Teleport Home",
+    Callback = function()
+        humroot.CFrame = CFrame.new(125.529221, 3.72332239, 49.8836975)
+    end
+})
+--Credits area
 local Section = CreditsTab:AddSection({
 	Name = "Credits"
 })
