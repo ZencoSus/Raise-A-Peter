@@ -74,3 +74,4 @@ CreditsTab:AddButton({
       		setclipboard("https://discord.gg/QaZ5yKCPzr")
   	end   
 })
+OrionLib:Init()
