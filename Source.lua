@@ -23,7 +23,7 @@ MainTab:AddToggle({
 	Default = false,
 	Callback = function(Value)
 	    farm = Value
-		while farm do wait(0.1)
+		while farm do wait(0)
         for a,b in pairs(game:GetService("Workspace").Interactables.MoneyBills:GetChildren())do if b.Name=="Money"then firetouchinterest(b,humroot,0)firetouchinterest(b,humroot,1)end end;for a,c in pairs(game:GetService("Workspace").Interactables.Peter:GetChildren())do if c.Name=="Peter"then humroot.CFrame=c.Clickable.CFrame*CFrame.new(0,-1.1,0)fireclickdetector(c.Clickable.DropMoney,0)end end;for a,d in pairs(game:GetService("Workspace").Interactables.BagFolder:GetChildren())do if d.Name=="Bag"then firetouchinterest(d,humroot,0)firetouchinterest(d,humroot,1)end end
 end
 end
@@ -59,7 +59,7 @@ MainTab:AddToggle({
 	    openbox = Value
 	   while openbox == true do wait(0)
 	    game:GetService("Workspace").Interactables.Objects.FrontDoor.Open.Value = true
-        for a,b in pairs(game:GetService("Workspace"):GetDescendants())do if b.Name=="ProximityPrompt"then if b.Parent.Parent.Name=="Bottom"then print(b)humroot.CFrame=b.Parent.Parent.CFrame;fireproximityprompt(b,0)end end end
+        for a,b in pairs(game:GetService("Workspace"):GetDescendants())do if b.Name=="ProximityPrompt"then if b.Parent.Parent.Name=="Bottom"then humroot.CFrame=b.Parent.Parent.CFrame;fireproximityprompt(b,0)end end end
 end
 end
 })
