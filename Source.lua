@@ -68,7 +68,7 @@ end
 
 })
 MainTab:AddToggle({
-    Name = "Toggle FeatherShop",
+    Name = 'Toggle FeatherShop "REQUIRES CHICKEN COOP"',
 	Default = false,
 	Callback = function(Value)
 	   if Value == true then
