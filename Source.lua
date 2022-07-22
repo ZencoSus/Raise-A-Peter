@@ -63,13 +63,6 @@ MainTab:AddToggle({
 end
 end
 })
-MainTab:AddButton({
-    Name = "Destroy GUI",
-	Callback = function()
-	    openbox = Value
-		OrionLib:Destroy()
-end
-})
 local Section = CreditsTab:AddSection({
 	Name = "Credits"
 })
